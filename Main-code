@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	char tasks[5][50];
+		int count = 0;
+		int choice = 0;
+
+		while (choice != 3)
+		{
+			cout << "\n==== tasks ====\n";
+			cout << "1. View Tasks\n";
+			cout << "2. Add Task\n";
+			cout << "3. Exit\n";
+			cout << "Pick an Option: ";
+			cin >> choice;
+
+			//clear newline char
+			cin.ignore();
+
+			if (choice == 1) {
+
+				cout << "====== Current Tasks ======\n";
+				if (count == 0) {
+					cout << "No Tasks yet, try adding some!\n";
+				}
+				else {
+					for (int i = 0; i < count; i++) {
+						cout << i + 1 << ". " << tasks[i] << '\n';
+					}
+
+				}
+
+			}
+
+			else if (choice == 2) {
+				if (count < 5) {
+					cout << "Enter Task Name:  ";
+
+					cin.getline(tasks[count], 50);
+					count++;
+					cout << "Added successfully!\n";
+				}
+				else {
+					cout << "list full! (Max 5 Tasks)\n";
+
+				}
+
+			}
+
+			else if (choice == 3) {
+				cout << "Terminating Program\n";
+			}
+			else {
+				cout << "Invalid choice.\n";
+			}
+		}
+
+		return 0;
+
+}
