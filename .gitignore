@@ -1,0 +1,18 @@
+# Build artifacts and debug outputs
+*.exe
+*.obj
+*.ilk
+*.pdb
+*.ipch
+*.aps
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.cache
+*.log
+
+# Visual Studio output folders
+Debug/
+Release/
+*.vcxproj.user
